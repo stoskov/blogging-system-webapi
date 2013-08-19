@@ -9,6 +9,7 @@ namespace BloggingSystem.Data.Migrations
 		public Configuration()
 		{
 			this.AutomaticMigrationsEnabled = true;
+			this.AutomaticMigrationDataLossAllowed = true;
 		}
 
 		protected override void Seed(BloggingSystem.Data.BloggingSystemContext context)

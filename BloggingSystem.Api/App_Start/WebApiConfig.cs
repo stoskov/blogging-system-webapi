@@ -25,6 +25,14 @@ namespace BloggingSystem.Api
 				});
 
 			config.Routes.MapHttpRoute(
+				name: "TagPosts",
+				routeTemplate: "api/tags/{tagId}/posts",
+				defaults: new
+				{
+					controller = "tags"
+				});
+
+			config.Routes.MapHttpRoute(
 				name: "DefaultApi",
 				routeTemplate: "api/{controller}/{id}",
 				defaults: new { id = RouteParameter.Optional });

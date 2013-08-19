@@ -149,20 +149,30 @@ namespace BloggingSystem.Api.Controllers
 			var matches = Regex.Matches(model.Title, @"\b[a-zA-Z]{1,}\b");
 			foreach (Match match in matches)
 			{
-				var tag = new Tag()
+				var tag = context.Tags.FirstOrDefault(t => t.Text == match.Value);
+
+				if (tag == null)
 				{
-					Text = match.Value
-				};
+					tag = new Tag()
+					{
+						Text = match.Value
+					};
+				}
 
 				post.Tags.Add(tag);
 			}
 
 			foreach (string tagText in model.Tags)
 			{
-				var tag = new Tag()
+				var tag = context.Tags.FirstOrDefault(t => t.Text == tagText);
+
+				if (tag == null)
 				{
-					Text = tagText
-				};
+					tag = new Tag()
+					{
+						Text = tagText
+					};
+				}
 
 				post.Tags.Add(tag);
 			}
@@ -258,15 +268,7 @@ namespace BloggingSystem.Api.Controllers
 
 		private void VerifySessionKey(string sessionKey)
 		{
-			var context = new BloggingSystemContext();
-
-			var user = context.Users.FirstOrDefault(
-				usr => usr.SessionKey == sessionKey);
-
-			if (user == null)
-			{
-				throw new ArgumentOutOfRangeException("You must be logged in to see this content");
-			}
+			Helpers.Validation.VerifySessionKey(sessionKey);
 		}
 	}
 }

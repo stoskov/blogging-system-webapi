@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
@@ -12,13 +13,23 @@ namespace BloggingSystem.Entities
 		[Required]
 		public string Text { get; set; }
 
-		[Required]
-		public int PostId { get; set; }
+		private ICollection<Post> posts;
 
-		public virtual Post Post { get; set; }
+		public virtual ICollection<Post> Posts
+		{
+			get
+			{
+				return this.posts;
+			}
+			set
+			{
+				this.posts = value;
+			}
+		}
 
 		public Tag()
 		{
+			this.posts = new HashSet<Post>();
 		}
 	}
 }
