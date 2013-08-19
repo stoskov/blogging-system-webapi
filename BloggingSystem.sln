@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Entities", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Data", "BloggingSystem.Data\BloggingSystem.Data.csproj", "{6BC4693D-87AB-42E7-83FA-2843D46F629A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Client", "BloggingSystem.Client\BloggingSystem.Client.csproj", "{9BC9AE87-FF35-4B82-9A9C-A9C5A7852B16}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BloggingSystem.Api", "BloggingSystem.Api\BloggingSystem.Api.csproj", "{6CC43202-B29B-40FD-8929-C7EE596CFB87}"
 EndProject
 Global
@@ -23,10 +21,6 @@ Global
 		{6BC4693D-87AB-42E7-83FA-2843D46F629A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BC4693D-87AB-42E7-83FA-2843D46F629A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BC4693D-87AB-42E7-83FA-2843D46F629A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BC9AE87-FF35-4B82-9A9C-A9C5A7852B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BC9AE87-FF35-4B82-9A9C-A9C5A7852B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BC9AE87-FF35-4B82-9A9C-A9C5A7852B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BC9AE87-FF35-4B82-9A9C-A9C5A7852B16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CC43202-B29B-40FD-8929-C7EE596CFB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CC43202-B29B-40FD-8929-C7EE596CFB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CC43202-B29B-40FD-8929-C7EE596CFB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
