@@ -20,8 +20,7 @@ namespace BloggingSystem.Entities
 
 		public virtual User User { get; set; }
 
-		[Required]
-		public int PostId { get; set; }
+		public int? PostId { get; set; }
 
 		public virtual Post Post { get; set; }
 

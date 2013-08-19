@@ -19,6 +19,8 @@ namespace BloggingSystem.Entities
 		[Required]
 		public string AuthCode { get; set; }
 
+		public string SessionKey { get; set; }
+
 		private ICollection<Post> posts;
 
 		public virtual ICollection<Post> Posts
